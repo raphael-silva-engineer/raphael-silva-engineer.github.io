@@ -19,14 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModal = () => {
     if (videoModal && videoIframe) {
       videoModal.style.display = 'none';
-      videoIframe.src = ''; // Interrompe o vídeo
+      videoIframe.src = '';
     }
   };
 
   // Fechar modal ao clicar no botão de fechar ou no overlay
   closeModalBtn.addEventListener('click', closeModal);
   videoModal.addEventListener('click', (e) => {
-    // Fecha apenas se clicar no overlay, não no conteúdo
     if (e.target === videoModal) {
       closeModal();
     }
